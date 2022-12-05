@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="301ced26-707f-4331-a7ac-3e0e8715cfde" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LinearBlockCodes.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Utils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
+    <list default="true" id="301ced26-707f-4331-a7ac-3e0e8715cfde" name="Changes" comment="Bad work Hamming codes">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/transfer/ChanelCoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/transfer/ChanelDecoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/transfer/Coder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/transfer/Decoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/transfer/Destination.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/transfer/TransferChanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/HammingAlgorithm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,13 +39,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/mmaks/IdeaProjects/HaffmanAlgo2Cod_2"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -51,8 +57,16 @@
       <option name="presentableId" value="Default" />
       <updated>1670159491062</updated>
       <workItem from="1670159492533" duration="21501000" />
-      <workItem from="1670230588799" duration="656000" />
+      <workItem from="1670230588799" duration="18937000" />
     </task>
+    <task id="LOCAL-00001" summary="Bad work Hamming codes">
+      <created>1670235381445</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1670235381445</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -68,5 +82,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Bad work Hamming codes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bad work Hamming codes" />
   </component>
 </project>
