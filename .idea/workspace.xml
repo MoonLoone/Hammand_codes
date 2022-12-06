@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="301ced26-707f-4331-a7ac-3e0e8715cfde" name="Changes" comment="Hamming codes works. I need to make service data collection correct.">
+    <list default="true" id="301ced26-707f-4331-a7ac-3e0e8715cfde" name="Changes" comment="Service information ready.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myFile.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/result.txt" beforeDir="false" afterPath="$PROJECT_DIR$/result.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service.txt" beforeDir="false" afterPath="$PROJECT_DIR$/service.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source.txt" beforeDir="false" afterPath="$PROJECT_DIR$/source.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/transfer/ChanelCoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfer/ChanelCoder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfer/ChanelDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfer/ChanelDecoder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfer/Coder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfer/Coder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfer/Decoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfer/Decoder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfer/Destination.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfer/Destination.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/transfer/TransferChanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/transfer/TransferChanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/HammingAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/HammingAlgorithm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Utils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +39,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/mmaks/IdeaProjects/HaffmanAlgo2Cod_2&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/mmaks/IdeaProjects/LinearBlockCodes&quot;
   }
 }</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -60,6 +54,9 @@
       <workItem from="1670230588799" duration="18937000" />
       <workItem from="1670261605674" duration="183000" />
       <workItem from="1670317087668" duration="2718000" />
+      <workItem from="1670324231641" duration="55000" />
+      <workItem from="1670333908920" duration="278000" />
+      <workItem from="1670344271884" duration="1518000" />
     </task>
     <task id="LOCAL-00001" summary="Bad work Hamming codes">
       <created>1670235381445</created>
@@ -75,7 +72,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670261742958</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Service information ready.">
+      <created>1670324274231</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1670324274231</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -95,6 +99,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Bad work Hamming codes" />
     <MESSAGE value="Hamming codes works. I need to make service data collection correct." />
-    <option name="LAST_COMMIT_MESSAGE" value="Hamming codes works. I need to make service data collection correct." />
+    <MESSAGE value="Service information ready." />
+    <option name="LAST_COMMIT_MESSAGE" value="Service information ready." />
   </component>
 </project>

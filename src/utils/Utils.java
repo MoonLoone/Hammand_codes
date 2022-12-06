@@ -147,8 +147,8 @@ public class Utils {
 
     public static String decodeFromBinaryString(String binaryString) {
         StringBuilder stringBuilder = new StringBuilder();
-        for (int i = 0; i < binaryString.length() - 7; i = i + 8) {
-            String substring = binaryString.substring(i, i + 8);
+        for (int i = 0; i < binaryString.length() - 11; i = i + 12) {
+            String substring = binaryString.substring(i, i + 12);
             char ch = (char) Integer.parseInt(substring, 2);
             stringBuilder.append(ch);
         }
@@ -186,9 +186,11 @@ public class Utils {
     }
 
     public static String convertToBinaryString(String text, FileWriter writer) {
+
         StringBuilder result = new StringBuilder();
         for (int i = 0; i < text.length(); i++) {
-            result.append(String.format("%8s", Integer.toBinaryString(text.charAt(i))).replace(' ', '0'));
+            //System.out.println(String.format("%12s", Integer.toBinaryString(text.charAt(i))).replace(' ', '0'));
+            result.append(String.format("%12s", Integer.toBinaryString(text.charAt(i))).replace(' ', '0'));
         }
 
         return result.toString();
