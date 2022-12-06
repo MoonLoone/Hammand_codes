@@ -10,14 +10,12 @@ import java.util.Scanner;
 
 public abstract class TransferChanel {
 
-    public static void transferToDecoder(String binaryString, int[][] G){
+    public static void transferToDecoder(String binaryString, int[][] G, FileWriter writer){
         System.out.println("Enter P: ");
         Scanner scanner = new Scanner(System.in);
         double P = scanner.nextDouble();
         String binaryTextWithNoises = Utils.makeNoises(binaryString, P);
-        Path serviceFilePath = Path.of("service.txt");
-
-        Decoder.transferToDecoderChanel(binaryTextWithNoises, G);
+        Decoder.transferToDecoderChanel(binaryTextWithNoises, G, writer);
     }
 
 }

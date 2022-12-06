@@ -8,12 +8,12 @@ import java.nio.file.Path;
 
 public abstract class ChanelCoder {
 
-    public static void transferToCoder(String text){
-        String binaryString = Utils.convertToBinaryString(text);
+    public static void transferToCoder(String text, FileWriter writer){
+        String binaryString = Utils.convertToBinaryString(text, writer);
 
         Path serviceFilePath = Path.of("service.txt");
 
-        Coder.transferToTransferChanel(binaryString);
+        Coder.transferToTransferChanel(binaryString, writer);
     }
 
 }

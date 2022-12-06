@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class Utils {
 
-    public static int[][] createMatrix() {
+    public static int[][] createMatrix(FileWriter writer) {
         int rowCount = 4;
         int columnCount = 7;
         int[][] G = new int[rowCount][columnCount];
@@ -18,7 +18,7 @@ public class Utils {
         String isEdit = scanner.nextLine();
         Path serviceFilePath = Path.of("service.txt");
 
-        if (isEdit.equals("yes")){
+        if (isEdit.equals("yes")) {
             G[0][0] = scanner.nextInt();
             G[0][1] = scanner.nextInt();
             G[0][2] = scanner.nextInt();
@@ -50,7 +50,7 @@ public class Utils {
             G[3][4] = scanner.nextInt();
             G[3][5] = scanner.nextInt();
             G[3][6] = scanner.nextInt();
-        }else {
+        } else {
             G[0][0] = 1;
             G[0][1] = 0;
             G[0][2] = 0;
@@ -84,10 +84,22 @@ public class Utils {
             G[3][6] = 1;
         }
 
+        try {
+            writer.append("\nGenerate matrix: \n");
+            for (int i = 0; i < 3; i++) {
+                for (int j = 0; j < 7; j++) {
+                    writer.append("" + G[i][j] + " ");
+                }
+                writer.append("\n");
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
         return G;
     }
 
-    public static int[][] createCheckMatrix(int[][] matrix) {
+    public static int[][] createCheckMatrix(int[][] matrix, FileWriter writer) {
         int[][] inverseMatrix = new int[3][7];
         Path serviceFilePath = Path.of("service.txt");
 
@@ -119,18 +131,14 @@ public class Utils {
         inverseMatrix[2][6] = matrix[2][2];
 
         try {
-            Files.delete(serviceFilePath);
-            Files.createFile(serviceFilePath);
-            FileWriter writer = new FileWriter(serviceFilePath.toString(),true);
             writer.append("Check matrix: \n");
             for (int i = 0; i < 3; i++) {
                 for (int j = 0; j < 7; j++) {
-                    writer.append(""+inverseMatrix[i][j]+" ");
+                    writer.append("" + inverseMatrix[i][j] + " ");
                 }
                 writer.append("\n");
             }
-            writer.flush();
-        }catch (IOException e) {
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
 
@@ -149,27 +157,40 @@ public class Utils {
 
     public static String makeNoises(String encodedText, double P) {
         StringBuilder stringBuilder = new StringBuilder();
-        int position = (int)(Math.random()*4+1);
-        System.out.println(position);
-        for (int i = 0; i < encodedText.length(); i++) {
-            position = position+7*i;
-            if (i == position) {
-                int number = Character.getNumericValue(encodedText.charAt(i));
-                if (number == 1) number = 0;
-                else {
-                    number = 1;
-                }
-                stringBuilder.append(number);
-            } else stringBuilder.append(encodedText.charAt(i));
+        if (P >= 0.8) {
+            for (int i = 0; i < encodedText.length(); i++) {
+                if (Math.random() >= 0.8) {
+                    int number = Character.getNumericValue(encodedText.charAt(i));
+                    if (number == 1) number = 0;
+                    else {
+                        number = 1;
+                    }
+                    stringBuilder.append(number);
+                } else stringBuilder.append(encodedText.charAt(i));
+            }
+        } else {
+            int position = (int) (Math.random() * 4 + 1);
+            for (int i = 0; i < encodedText.length(); i++) {
+                position = position + 7 * i;
+                if (i == position) {
+                    int number = Character.getNumericValue(encodedText.charAt(i));
+                    if (number == 1) number = 0;
+                    else {
+                        number = 1;
+                    }
+                    stringBuilder.append(number);
+                } else stringBuilder.append(encodedText.charAt(i));
+            }
         }
         return stringBuilder.toString();
     }
 
-    public static String convertToBinaryString(String text){
+    public static String convertToBinaryString(String text, FileWriter writer) {
         StringBuilder result = new StringBuilder();
         for (int i = 0; i < text.length(); i++) {
             result.append(String.format("%8s", Integer.toBinaryString(text.charAt(i))).replace(' ', '0'));
         }
+
         return result.toString();
     }
 

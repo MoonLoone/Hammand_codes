@@ -1,5 +1,9 @@
 package utils;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.nio.file.Files;
+
 public class HammingAlgorithm {
 
     public static String encode(String text, int[][] G) {
@@ -43,12 +47,20 @@ public class HammingAlgorithm {
         return result.toString();
     }
 
-    public static String cutServiceBits(String binaryString){
+    public static String cutServiceBits(String binaryString, FileWriter writer){
         StringBuilder stringBuilder = new StringBuilder();
         for (int i = 0; i <= binaryString.length() - 7; i = i + 7) {
             String str = binaryString.substring(i, i +4);
             stringBuilder.append(str);
         }
+        try {
+            writer.append("Decoded text in binary: \n");
+            writer.append(stringBuilder.toString());
+            writer.flush();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
         return stringBuilder.toString();
     }
 

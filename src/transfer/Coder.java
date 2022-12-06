@@ -10,11 +10,11 @@ import java.nio.file.Path;
 
 public abstract class Coder {
 
-    public static void transferToTransferChanel(String binaryString){
-        int[][] G = Utils.createMatrix();
+    public static void transferToTransferChanel(String binaryString, FileWriter writer){
+        int[][] G = Utils.createMatrix(writer);
         String encoded = HammingAlgorithm.encode(binaryString, G);
 
-        TransferChanel.transferToDecoder(encoded,G);
+        TransferChanel.transferToDecoder(encoded,G, writer);
     }
 
 }
